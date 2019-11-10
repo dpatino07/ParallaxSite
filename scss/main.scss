@@ -1,3 +1,7 @@
+@import 'menu';
+@import 'config';
+@import 'mobile';
+
 body, html {
     height: 100%;
     margin: 0;
@@ -6,9 +10,10 @@ body, html {
     font-weight: 400;
     line-height: 1.8em;
     color: #666;
+    scroll-behavior: smooth;
 }
 
-.pimg1, .pimg2, .pimg3 {
+.pimg1, .pimg2, .pimg3, .pimg4 {
     position: relative;
     opacity:0.7;
     background-position: center;
@@ -23,17 +28,22 @@ body, html {
 }
 
 .pimg1 {
-    background-image: url('../img/adult-architecture-athlete-boardwalk-221210.jpg');
+    background-image: url('../img/hamstretchbridge.jpg');
     min-height: 100%;
 }
 
 .pimg2 {
-    background-image: url('../img/man-and-woman-holding-battle-ropes-1552242.jpg');
+    background-image: url('../img/jumpkick.jpg');
     min-height: 400px;
 }
 
 .pimg3 {
     background-image: url('../img/man-doing-pushup-209969.jpg');
+    min-height: 400px;
+}
+
+.pimg4 {
+    background-image: url('../img/battleropes.jpg');
     min-height: 400px;
 }
 
@@ -43,12 +53,12 @@ body, html {
 }
 
 .section-light {
-    background-color: #f4f4f4;
-    color: #666;
+    background-color: #fff;
+    color: #444;
 }
 
 .section-dark {
-    background-color: #282e34;
+    background-color: #444;
     color: #ddd;
 }
 
@@ -67,14 +77,48 @@ body, html {
     background-color: #111;
     color: #fff;
     padding: 20px;
+    border: #fff 2px solid;
 }
 
-.ptext .border.trans {
-    background-color: transparent;
+.program-list {
+    display: inline-block;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 10px 20px;
+    border: #666 2px solid;
+    border-radius: 10px;
+    text-align: center;
+
+    h3 {
+        border-bottom: 1px #666 solid;
+    }
 }
 
-@media(max-width: 568px) {
-    .pimg1, .pimg2, .pimg3 {
-        background-attachment: scroll;
+.program-item {
+    list-style: none;
+}
+
+.btn {
+    background: linear-gradient(to bottom, #666, #333);
+    color: #fff;
+    width: 100px;
+    height: 30px;
+
+    &:hover {
+        background: linear-gradient(to bottom, rgb(64, 138, 88), darken(rgb(64, 138, 88), 30));
+    }
+}
+
+
+#main-footer {
+    text-align: center;
+    height: 40px;
+    width: 100%;
+    background: #666;
+    color: #fff;
+
+    a {
+        text-decoration: none;
+        color: #ddd;
     }
 }
